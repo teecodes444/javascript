@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM: Shopping list example</title>
+
     <style>
+
       li {
         margin-bottom: 10px;
       }
@@ -14,6 +16,7 @@
         margin-left: 20px;
         color: #666;
       }
+
     </style>
   </head>
   <body>
@@ -21,9 +24,11 @@
     <h1>My shopping list</h1>
 
     <div>
+
       <label for="item">Enter a new item:</label>
       <input type="text" name="item" id="item">
       <button>Add item</button>
+
     </div>
 
     <ul>
@@ -31,6 +36,30 @@
     </ul>
 
     <script>
+
+        const unlist = document.querySelector("ul");
+        const spanEl = document.querySelector("span");
+        const btn = document.querySelector("button").addEventListener('click', run);
+
+        function run() {
+            let inputVal = document.querySelector("#item").value;
+            inputVal = '';
+
+            const list = document.createElement("li");
+            const newSpan = document.createElement("span");
+            const newBtn = document.createElement("button").addEventListener('click', del);
+
+            list.appendChild(newSpan);
+            list.appendChild(newBtn);
+
+            newSpan.textContent = inputVal;
+            newBtn.textContent = "Delete";
+            function del() {
+
+            }
+
+
+        }
 
     </script>
   </body>
