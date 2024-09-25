@@ -37,6 +37,30 @@
 
     <script>
 
+       /*  const unlist = document.querySelector("ul");
+        const spanEl = document.querySelector("span");
+        const btn = document.querySelector("button").addEventListener('click', run);
+
+        function run() {
+            let inputVal = document.querySelector("#item").value;
+            inputVal = '';
+
+            const list = document.createElement("li");
+            const newSpan = document.createElement("span");
+            const newBtn = document.createElement("button").addEventListener('click', del);
+
+            list.appendChild(newSpan);
+            list.appendChild(newBtn);
+
+            newSpan.textContent = inputVal;
+            newBtn.textContent = "Delete";
+            function del() {
+
+            }
+
+
+        } */
+
         const list = document.querySelector("ul");
         const input = document.querySelector("input");
         const btn = document.querySelector("button").addEventListener('click', run);
@@ -64,7 +88,6 @@
             input.focus();
         }
 
-        run();
 
     </script>
   </body>
